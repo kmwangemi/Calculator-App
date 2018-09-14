@@ -4,13 +4,12 @@ python:
   - "3.4"
   - "3.5"
   - "3.6"
-  - "3.7"
 before_script:
 - pip install -r requirements.txt
 install:
   - sudo pip install nose
   - sudo pip install coveralls
 script:
-  - nosetests --with-coverage --cover-erase --cover-package=tests
+  - nosetests --with-coverage --cover-erase --cover-package=test
 after_success:
   - coveralls
